@@ -1,0 +1,6 @@
+<% _.each(groups, function(vars, group) { %>
+// > <%=  _.titleize(group) %>
+// ----------------------------------------------------------------
+<% _.each(vars, function(val, key) { %>// <%= key %>: <%= val %>;
+<% }) %>
+<% }) %>

@@ -1,0 +1,118 @@
+{
+  "reset": {
+    "ui": true,
+    "mobile": true
+  },
+  "base": {
+    "ui": true,
+    "mobile": true
+  },
+  "icons": {
+    "ui": true,
+    "mobile": true
+  },
+  "close": {
+    "ui": true,
+    "mobile": true
+  },
+  "badges": {
+    "ui": true,
+    "mobile": false
+  },
+  "boxes": {
+    "ui": true,
+    "mobile": true
+  },
+  "bubble": {
+    "ui": true,
+    "mobile": false
+  },
+  "buttons": {
+    "ui": true,
+    "mobile": true
+  },
+  "calendar": {
+    "ui": true,
+    "mobile": false
+  },
+  "carousel": {
+    "ui": true,
+    "mobile": true
+  },
+  "datagrid": {
+    "ui": true,
+    "mobile": true
+  },
+  "datepicker": {
+    "ui": true,
+    "mobile": false
+  },
+  "dropdown": {
+    "ui": true,
+    "mobile": true
+  },
+  "expandable": {
+    "ui": true,
+    "mobile": true
+  },
+  "form": {
+    "ui": true,
+    "mobile": true
+  },
+  "layer": {
+    "ui": true,
+    "mobile": false
+  },
+  "lists": {
+    "ui": true,
+    "mobile": true
+  },
+  "loading": {
+    "ui": true,
+    "mobile": true
+  },
+  "menu": {
+    "ui": true,
+    "mobile": true
+  },
+  "modal": {
+    "ui": true,
+    "mobile": true
+  },
+  "pagination": {
+    "ui": true,
+    "mobile": true
+  },
+  "popover": {
+    "ui": true,
+    "mobile": true
+  },
+  "tabs": {
+    "ui": true,
+    "mobile": false
+  },
+  "tooltip": {
+    "ui": true,
+    "mobile": true
+  },
+  "transition": {
+    "ui": true,
+    "mobile": true
+  },
+  "typography": {
+    "ui": true,
+    "mobile": true
+  },
+  "wizard": {
+    "ui": true,
+    "mobile": false
+  },
+  "zoom": {
+    "ui": true,
+    "mobile": false
+  },
+  "autocomplete": {
+    "ui": true,
+    "mobile": true
+  }
+}

@@ -1,0 +1,7 @@
+@import 'settings';
+@import 'settings-mobile';
+<% if (isSubtheme) { %>
+@import 'settings-<%= slugifiedName %>';
+@import 'settings-<%= slugifiedName %>-mobile';
+<% } %>
+@import '../../<%= bower.directory %>/chico/src/mobile/styles/mobile-theme';

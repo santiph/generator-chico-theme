@@ -1,0 +1,13 @@
+@import 'bourbon';
+
+@import 'settings';
+@import 'settings-ui';
+<% if (isSubtheme) { %>
+@import 'settings-<%= slugifiedName %>';
+@import 'settings-<%= slugifiedName %>-ui';
+<% } %>
+
+@import '../../<%= bower.directory %>/chico/src/shared/styles/mixins';
+@import '../../<%= bower.directory %>/chico/src/shared/styles/variables';
+<% components.forEach(function(component) { %>
+@import '../../<%= bower.directory %>/chico/src/ui/styles/<%= component %>';<% }) %>
