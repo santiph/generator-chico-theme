@@ -1,0 +1,9 @@
+{
+  "name": "<%= slugifiedName %>",
+  "version": "0.0.1",
+  "dependencies": {
+    "chico": "git@github.com:mercadolibre/chico.git#~1.2.0",
+    "mesh": "https://raw.githubusercontent.com/mercadolibre/mesh/master/dist/mesh.css",
+    "bourbon": "~4.2.2"
+  }
+}

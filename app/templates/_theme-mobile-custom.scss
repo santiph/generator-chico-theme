@@ -1,0 +1,12 @@
+@import 'bourbon';
+
+@import 'settings';
+@import 'settings-mobile';
+<% if (isSubtheme) { %>
+@import 'settings-<%= slugifiedName %>';
+@import 'settings-<%= slugifiedName %>-mobile';
+<% } %>
+@import '../../<%= bower.directory %>/chico/src/shared/styles/mixins';
+@import '../../<%= bower.directory %>/chico/src/shared/styles/variables';
+<% components.forEach(function(component) { %>
+@import '../../<%= bower.directory %>/chico/src/mobile/styles/<%= component %>';<% }) %>

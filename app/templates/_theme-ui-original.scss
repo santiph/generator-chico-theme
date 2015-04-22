@@ -1,0 +1,7 @@
+@import 'settings';
+@import 'settings-ui';
+<% if (isSubtheme) { %>
+@import 'settings-<%= slugifiedName %>';
+@import 'settings-<%= slugifiedName %>-ui';
+<% } %>
+@import '../../<%= bower.directory %>/chico/src/ui/styles/ui-theme';
