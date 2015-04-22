@@ -15,7 +15,8 @@
   },
   "files": [
     "app",
-    "subtheme"
+    "subtheme",
+    "data"
   ],
   "keywords": [
     "yeoman-generator",

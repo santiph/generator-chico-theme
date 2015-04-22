@@ -16,7 +16,7 @@
 If you'd like to get to know Yeoman better check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started). 
 
 ```bash
-npm install -g yo
+npm install -g yo bower gulp
 ```
 
 ### Chico theme generator
@@ -58,7 +58,7 @@ src/
    |- theme-mobile.scss // Main theme file for Mobile
 ````
 
-*Preview theme on /ui.html or /mobile.html*
+*Preview theme on `/ui.html` or `/mobile.html`*
 
 ### Subtheme structure
 
@@ -74,7 +74,7 @@ src/
    |- <name>-mobile.scss // Main subtheme file for Mobile
 ````
 
-*Preview subtheme on /<name>-ui.html or /<name>-mobile.html*
+*Preview subtheme on `/<name>-ui.html` or `/<name>-mobile.html`*
 
 ## Gulp tasks:
 
