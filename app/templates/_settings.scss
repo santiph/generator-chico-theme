@@ -1,4 +1,4 @@
-<% if (typeof groups !== 'undefined' && groups.length) { _.each(groups, function(vars, group) { %>
+<% if (typeof groups !== 'undefined') { _.each(groups, function(vars, group) { %>
 // > <%=  _.titleize(group) %>
 // ----------------------------------------------------------------
 <% _.each(vars, function(val, key) { %>// <%= key %>: <%= val %>;

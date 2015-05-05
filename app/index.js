@@ -265,7 +265,6 @@ module.exports = yeoman.generators.Base.extend({
         mobileFiles.forEach(function(f){ extractSassVars(f, 'mobile') });
 
         this.log('Generating the Sass variables reference for ' + chalk.green(this.opts.name) + ' theme');
-        //this.fs.copyTpl(this.templatePath('_settings.scss'), this.destinationPath('src/styles/_settings.scss'), this.opts);
         this.fs.copyTpl(
             this.templatePath('_settings.scss'),
             this.destinationPath('src/styles/_settings.scss'),

@@ -35,7 +35,6 @@ describe('chico-theme', function () {
     it('creates theme files', function (done) {
         runGen.on('end', function() {
             assert.file([
-                'src/styles/_settings.scss',
                 'src/styles/theme-ui.scss',
                 'src/styles/theme-mobile.scss'
             ]);
