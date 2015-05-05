@@ -154,8 +154,6 @@ module.exports = yeoman.generators.Base.extend({
             this.fs.copyTpl(this.templatePath('_package.json'), this.destinationPath('package.json'), this.opts);
             this.fs.copyTpl(this.templatePath('_bower.json'), this.destinationPath('bower.json'), this.opts);
 
-            this.fs.copyTpl(this.templatePath('_settings.scss'), this.destinationPath('src/styles/_settings.scss'), this.opts);
-
             if (this.opts.customizeTheme) {
                 this.opts.components.forEach(function (c) {
                     var component = c.toLowerCase();
@@ -212,7 +210,8 @@ module.exports = yeoman.generators.Base.extend({
             return this;
         }
 
-        var uiVariables = {},
+        var sharedVariables = {},
+            uiVariables = {},
             mobileVariables = {},
 
             chicoSrc = path.join(process.cwd(), this.opts.bower.directory, 'chico/src/'),
@@ -229,6 +228,9 @@ module.exports = yeoman.generators.Base.extend({
 
             if(matches = /_(.+)-variables\.scss/i.exec(f)) {
                 groupName = matches[1];
+                if (t === 'shared' && !sharedVariables[groupName]) {
+                    sharedVariables[groupName] = {};
+                }
                 if ((t === 'shared' || t === 'ui') && !uiVariables[groupName]) {
                     uiVariables[groupName] = {};
                 }
@@ -245,6 +247,9 @@ module.exports = yeoman.generators.Base.extend({
                         var k = matches[1].trim(),
                             v = matches[2].trim().replace(/\s+\!default/, '');
 
+                        if (t === 'shared') {
+                            sharedVariables[groupName][k] = v;
+                        }
                         if (t === 'shared' || t === 'ui') {
                             uiVariables[groupName][k] = v;
                         }
@@ -260,6 +265,14 @@ module.exports = yeoman.generators.Base.extend({
         mobileFiles.forEach(function(f){ extractSassVars(f, 'mobile') });
 
         this.log('Generating the Sass variables reference for ' + chalk.green(this.opts.name) + ' theme');
+        this.fs.copyTpl(
+            this.templatePath('_settings.scss'),
+            this.destinationPath('src/styles/_settings.scss'),
+            {
+                _: _,
+                groups: sharedVariables
+            }
+        );
         this.fs.copyTpl(
             this.templatePath('_settings-ui.scss'),
             this.destinationPath('src/styles/_settings-ui.scss'),

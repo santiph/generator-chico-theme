@@ -98,15 +98,15 @@ module.exports = yeoman.generators.NamedBase.extend({
                 );
             }
             if (!this.fs.exists(this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-ui.scss'))) {
-                this.fs.copy(
-                    this.templatePath('_settings.scss'),
-                    this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-ui.scss')
+                this.fs.write(
+                    this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-ui.scss'),
+                    ''
                 );
             }
             if (!this.fs.exists(this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-mobile.scss'))) {
-                this.fs.copy(
-                    this.templatePath('_settings.scss'),
-                    this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-mobile.scss')
+                this.fs.write(
+                    this.destinationPath('src/styles/_settings-' + this.options.slugifiedName + '-mobile.scss'),
+                    ''
                 );
             }
 
