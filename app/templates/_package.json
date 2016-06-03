@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Chico UI themes",
   "repository": "<%= author.html_url %>/<%= slugifiedName %>",
-  "private": true,
   "authors": [
     {
       "name": "<%= author.name %>",
